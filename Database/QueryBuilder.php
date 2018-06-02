@@ -65,7 +65,7 @@ class QueryBuilder
         return $this->pdo->lastInsertId();
     }
 
-    public function createCalendarTable()
+    public function createCalendarsTable()
     {
         $sql = 'CREATE TABLE IF NOT EXISTS calendars (
             id INT NOT NULL auto_increment,

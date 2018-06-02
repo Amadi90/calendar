@@ -2,8 +2,8 @@
 
 namespace App\Core;
 
-class App
-{
+class Config {
+
     protected static $registry = [];
 
     public static function bind($key, $value)
