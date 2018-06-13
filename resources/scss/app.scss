@@ -75,8 +75,7 @@ td[date] {
     left: 50%;
     position: fixed;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .calendar-container {
@@ -122,6 +121,7 @@ td[date] {
 .calendar td {
     padding: 0.5em 1em;
     text-align: center;
+    transition: 0.3s;
 }
 
 .calendar tbody td:hover {
