@@ -19,7 +19,7 @@ class Ajax {
                 break;
 
             case 'get_calendars':
-                $calendars = App::get('database')->select('calendars');
+                $calendars = Calendar::all();
                 echo json_encode($calendars);
                 break;
 
