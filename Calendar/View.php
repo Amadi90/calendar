@@ -35,7 +35,7 @@ class View
         }
     }
 
-    public function calendar($calendarSlug){
+    public static function calendar($calendarSlug){
         self::render('calendar', $calendarSlug);
     }
 
