@@ -32,7 +32,6 @@ if(isAjaxRequest()){
 }
 
 // $calendar = new Calendar('calendar-1');
-// $calendar = Calendar::select('calendar-1');
 
 // $calendar->addEvent('Event 1', 'Description 1');
 // $calendar->addEvent('Event 2', 'Description 2', '1992-03-05');
@@ -43,6 +42,7 @@ if(isAjaxRequest()){
 
 // echo 'DB Requests Count: '. App::get('database')->selectRequestsCount();
 if(isset($_REQUEST['show_calendar'])){
+    $calendar = Calendar::select($_REQUEST['show_calendar']);
     View::calendar($_REQUEST['show_calendar']);
 }
 else {
