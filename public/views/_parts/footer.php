@@ -1,3 +1,3 @@
-    <script src="/calendar/public/assets/js/app.js"></script>
+    <script src="/public/assets/js/app.js"></script>
 </body>
 </html>
