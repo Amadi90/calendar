@@ -2,7 +2,8 @@
 
 <div id="calendar-vue">
 
-    <Modal></Modal>
+    <modal-add-calendar></modal-add-calendar>
+    <modal-add-event></modal-add-event>
 
     <calendars-list></calendars-list>
 

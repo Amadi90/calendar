@@ -1,5 +1,5 @@
 <template>
-    <div class="calendar-item">
+    <div class="calendar-list-item">
         <div class="flexbox flex-align-center flex-justify-space-between">
             <div class="id" v-text="id"></div>
             <div class="name" v-text="title"></div>
@@ -21,7 +21,7 @@ export default {
             id: this.calendar.id,
             title: this.calendar.title,
             slug: this.calendar.title,
-            link: '/calendar?show_calendar=' + this.calendar.title
+            link: '?show_calendar=' + this.calendar.title
         }
     },
     props: ['calendar'],

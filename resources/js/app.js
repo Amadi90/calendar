@@ -1,5 +1,6 @@
 import Vue from 'vue';
-import Modal from './components/Modal';
+import ModalAddCalendar from './components/ModalAddCalendar';
+import ModalAddEvent from './components/ModalAddEvent';
 import CalendarsList from './components/CalendarsList';
 
 Vue.config.productionTip = false;
@@ -10,8 +11,9 @@ new Vue({
         selectedDate: false
     },
     components: {
-        Modal,
-        'calendars-list': CalendarsList
+        ModalAddCalendar,
+        ModalAddEvent,
+        CalendarsList
     },
     methods: {
         addEvent(event) {

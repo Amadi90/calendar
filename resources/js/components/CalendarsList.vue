@@ -1,9 +1,10 @@
 <template>
     <div>
-        <button @click.prevent="toggleModal">toggle modal</button>
+        <button @click.prevent="toggleModal">calendars list</button>
 
         <div class="calendars-list modal" :class="activeModal ? ' active' : ''">
-            <calendar-item v-for="calendar in calendars" :key="calendar.id" :calendar="calendar"></calendar-item>
+            <button @click.prevent="toggleModal">close calendars list toggleModal</button>
+            <calendar-list-item v-for="calendar in calendars" :key="calendar.id" :calendar="calendar"></calendar-list-item>
         </div>
     </div>
 </template>
@@ -12,7 +13,7 @@
 import axios from 'axios';
 import qs from 'qs';
 
-import CalendarItem from './CalendarItem';
+import CalendarListItem from './CalendarListItem';
 
 export default {
     name: 'CalendarsList',
@@ -25,13 +26,12 @@ export default {
     },
     methods: {
         getCalendarsList() {
-            var self = this;
-            axios.post('/calendar/', qs.stringify({
+            axios.post('/', qs.stringify({
                 ajax: true,
                 action: 'get_calendars'
             }))
-            .then(function (response) {
-                self.calendars = response.data;
+            .then( (response) => {
+                this.calendars = response.data;
             });
         },
         toggleModal() {
@@ -39,7 +39,7 @@ export default {
         }
     },
     components: {
-        'calendar-item': CalendarItem
+        CalendarListItem
     }
 }
 </script>
