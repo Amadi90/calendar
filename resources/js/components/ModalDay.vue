@@ -1,13 +1,12 @@
 <template>
     <div>
-        <div class="modal add-event" :class="showModal ? 'active' : ''">
-            <br>
+        <div class="modal day-details" :class="showModal ? 'active' : ''">
 
             <form id="add-event" class="axios">
-                <input type="text" name="calendar_id" v-model="calendar_id">
+                <input type="text" name="calendar_id" v-model="calendar_id" disabled>
+                <input type="text" name="event_date" v-model="event_date" disabled>
                 <input type="text" name="event_title" v-model="event_title">
                 <input type="text" name="event_description" v-model="event_description">
-                <input type="text" name="event_date" v-model="event_date" disabled>
                 <br>
                 <br>
                 <button @click.prevent="addEvent">Add</button>
@@ -25,11 +24,11 @@ import axios from 'axios';
 import qs from 'qs';
 
 export default {
-    name: 'ModalAddEvent',
-    props: ['showModal', 'date'],
+    name: 'ModalDay',
+    props: ['showModal', 'date', 'calendar'],
     data () {
         return {
-            calendar_id: 'calendar-id',
+            calendar_id: this.calendar,
             event_title: 'event title',
             event_description: 'event description',
             event_date: this.date
@@ -40,7 +39,7 @@ export default {
             axios.post('/',
                 qs.stringify({
                     ajax: true,
-                    action: 'add_calendar',
+                    action: 'add_event',
                     calendar_name: this.calendar_name,
                     calendar_description: this.calendar_description,
                 })

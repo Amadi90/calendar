@@ -13,7 +13,7 @@
     box-shadow: 0 0 30px #ddd;
     border-radius: 15px;
     
-    &.active, &:hover, &:focus {
+    &.active {
         visibility: visible;
         opacity: 1;
         top: 50%;
@@ -169,4 +169,20 @@ td[date] {
 
 td.has-event {
     background-color: #ececec;
+}
+
+.calendar-container header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-container tr {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar-container tr td, th.day-label {
+    box-sizing: border-box;
+    width: 14%;
 }

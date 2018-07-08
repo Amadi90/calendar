@@ -10,6 +10,10 @@
                 <button @click.prevent="save">Save</button>
             </form>
             
+            <div>
+                <button @click.prevent="toggleModal">close</button>
+            </div>
+
         </div>
 
     </div>

@@ -18,5 +18,8 @@
         "laravel-mix": "^1.7.2",
         "vue": "^2.5.16",
         "vue-cli": "^2.9.5"
+    },
+    "dependencies": {
+        "moment": "^2.22.2"
     }
 }

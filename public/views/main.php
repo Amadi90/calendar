@@ -2,10 +2,12 @@
 
 <div id="calendar-vue">
 
-    <modal-add-calendar></modal-add-calendar>
-    <modal-add-event></modal-add-event>
+    <div class="container">
 
-    <calendars-list></calendars-list>
+        <modal-add-calendar></modal-add-calendar>
+        <calendars-list></calendars-list>
+
+    </div>
 
 </div>
 
